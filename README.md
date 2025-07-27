@@ -164,4 +164,4 @@ Contributions are welcome! Please ensure new applications follow the existing pa
 
 ## License
 
-This project is open source. Please check the license file for details.
+This project is licensed under the MIT [License](./LICENSE) - see the LICENSE file for details.
