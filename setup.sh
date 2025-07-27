@@ -30,6 +30,7 @@ INSTALL_FLATPAK=true
 
 # Applications Toggle (used via install_with_toggle function)
 INSTALL_BRAVE=true
+INSTALL_LIBREWOLF=true
 INSTALL_MULLVAD=true
 INSTALL_BITWARDEN=true
 INSTALL_VERACRYPT=true
@@ -510,6 +511,29 @@ install_brave() {
         curl -fsS https://dl.brave.com/install.sh | sh
         log_success "Brave Browser installed successfully"
     fi
+}
+
+# Install LibreWolf Browser
+install_librewolf() {
+    log_info "Installing LibreWolf Browser..."
+
+    if command_exists librewolf; then
+        log_warning "LibreWolf Browser is already installed"
+        return 0
+    fi
+
+    log_info "Installing extrepo package manager..."
+    sudo apt-get update
+    sudo apt-get install -y extrepo
+
+    log_info "Enabling LibreWolf repository..."
+    sudo extrepo enable librewolf
+
+    log_info "Installing LibreWolf Browser..."
+    sudo apt-get update
+    sudo apt-get install -y librewolf
+
+    log_success "LibreWolf Browser installed successfully"
 }
 
 # Download and install Mullvad VPN
@@ -1211,6 +1235,7 @@ install_applications() {
     log_info "=== Installing Applications ==="
 
     install_with_toggle "INSTALL_BRAVE" "install_brave" "Brave Browser"
+    install_with_toggle "INSTALL_LIBREWOLF" "install_librewolf" "LibreWolf Browser"
     install_with_toggle "INSTALL_MULLVAD" "install_mullvad" "Mullvad VPN"
     install_with_toggle "INSTALL_BITWARDEN" "install_bitwarden" "Bitwarden"
     install_with_toggle "INSTALL_VERACRYPT" "install_veracrypt" "VeraCrypt"

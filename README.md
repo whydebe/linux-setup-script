@@ -47,38 +47,40 @@ INSTALL_SPOTIFY=true
 
 ### Development Tools
 
-- Visual Studio Code / VSCodium
-- Docker (includes Docker Compose)
+- Visual Studio Code (Official Builds form Microsoft)
+- VSCodium (FOSS alternative to Visual Studio Code)
+- Docker (Containerization platform)
 - Programming language toolchains (Python, Rust, Go, Java, C/C++)
-- Node.js, Hugo
+- Node.js (JavaScript runtime environment)
+- HUGO (Static site generator)
 
-### Browsers & Communication
+### Browsers
 
-- Brave Browser
-- Mullvad VPN
+- Brave Browser (Privacy-focused browser)
+- LibreWolf (Hardened Firefox fork with enhanced privacy)
 
 ### Productivity
 
-- Bitwarden password manager
-- ONLYOFFICE Desktop Editors
-- Filezilla FTP client
-- Texmaker LaTeX editor
+- Bitwarden (Password manager)
+- ONLYOFFICE Desktop Editors (Office suite)
+- Filezilla (FTP client)
+- Texmaker (LaTeX editor)
 
 ### Media & Entertainment
 
-- Spotify
-- VLC Media Player
+- Spotify (Music streaming service)
+- VLC (Media player)
 - MultiMC (Minecraft launcher)
 
 ### Security & Privacy
 
-- VeraCrypt (file & disk encryption)
-- Mullvad VPN
+- VeraCrypt (File & disk encryption)
+- Mullvad VPN (VPN service)
 
 ### File Sharing & Downloading
 
-- LocalSend
-- JDownloader
+- LocalSend (Cross platform file transfer tool (alternative to AirDrop))
+- JDownloader (Download manager)
 
 ## Font Installation
 
@@ -98,7 +100,7 @@ Supported font formats:
 
 ## AI Models
 
-Pre-configured Ollama models for local AI development:
+Pre-configured Ollama models for local AI:
 
 ```bash
 AI_MODELS=(
